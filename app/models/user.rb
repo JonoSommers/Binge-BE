@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
-  VALID_PASSWORD_REGEX = /\A(?=.[A-Z])(?=.\d)(?=.[!@#$%^&]).{8,}\z/
+  VALID_PASSWORD_REGEX = /\A(?=.*[A-Z])(?=.\d)(?=.[!@#$%^&]).{10,}\z/
 
 
   validates :username, presence: true, uniqueness: true
